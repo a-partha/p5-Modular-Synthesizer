@@ -15,7 +15,7 @@ function setup() {
     noise.connect(filt);
     filt.freq(freq);
     noise.start();
-    noise.amp(0.05);
+    noise.amp(0.4);
     // Fast Fourier Transform (FFT) for visualization
     fft = new p5.FFT();
 
