@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    height: 800px;
+    width: 100vw;
+    font-family: "Josefin Sans";
+    background-color: rgba(0, 0, 0, 0.852);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .center-box {
+    width: 1400px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* border: 5px solid rgb(0, 0, 0); */
+  }
+  
+  .text-box {
+    margin-top: 45px;
+    width: 1375px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: start;
+    border: 5px solid rgb(131, 123, 143);
+  
+    border-radius: 25px;
+   
+    opacity: 95%;
+  }
+  
+  #osc-sketch {
+    display: flex;
+    align-self: center;
+    width: 1375px;
+    margin-top: 20px;
+    border: 5px solid rgb(131, 123, 143);
+    
+   
+  }
+  
+  p {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+
+  }
+
+  h1{
+    color: white;
+    text-align: center;
+  }
+  
