@@ -1,0 +1,88 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Josefin Sans";
+  background-color: rgba(0, 0, 0, 0.851);
+  display: flex;
+  justify-content: center;
+}
+
+.center-box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* border: 5px solid rgb(246, 255, 0); */
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: start;
+    border: 5px solid rgb(131, 123, 143);
+    width: 1000px;
+    border-radius: 25px;
+    padding-bottom: 20px;
+    opacity: 95%;
+}
+
+#seq1-sketch {
+  display: flex;
+  align-self: center;
+  /* margin-top: 40px; */
+  border: 5px solid rgb(131, 123, 143);
+  margin-bottom: 25px;
+ 
+}
+
+p {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+
+}
+
+h1{
+  color: white;
+  text-align: center;
+}
+
+.button-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#button1 {
+  height: 50px;
+  width: 170px;
+  align-self: center;
+  font-size: 22px;
+  border-radius:25px;
+  background-color: #c7c7c7; /* Green */
+  border: 5px solid rgb(131, 123, 143);
+  font-family: "Josefin Sans";
+  text-align:center;
+}
+
+
+#button1:hover {
+/* background-color: rgb(85, 81, 90);; 
+color: rgb(255, 255, 255);  */
+box-shadow: 0 8px 15px 1px rgb(255, 255, 255);
+}
+
+
+ul {
+  text-align: left;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+}

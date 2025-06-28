@@ -36,10 +36,10 @@
 
 <div class="col2-container">
   <h1 align="center">A simple <a href="https://en.wikipedia.org/wiki/Modular_synthesizer" target="_blank">Modular Synthesizer</a></h1>
-  <p align="center">[Make sure that your volume is at a decent level and not too high!]</p>
-  <p align="center">[Permissions, such as enabling autoplay, may be required depending on your browser settings]</p> 
+  <p align="center">[Make sure that your volume is not too high!]</p>
+  <p align="center">[Permissions, such as enabling autoplay, may be required depending on your browser settings.]</p> 
   <p align="center"><b>A mini MIDI Keyboard made using an <a href="env.html" target="_blank">Envelope</a> to produce notes.</b></p>
-  <p align="center"><b>MIDI is short for Musical Instrument Digital Interface which is a protocol for <a href="seq.html" target="_blank">Sequencing</a>.</b></p>
+  <p align="center"><b>MIDI is short for Musical Instrument Digital Interface which is a protocol for <a href="sequencer.html" target="_blank">Sequencing</a>.</b></p>
  
 
   <div class="piano-container">
@@ -82,14 +82,13 @@
       </svg>
     
     <div class="white-box">
-    <!-- 7 small rectangles below SVG -->
-    <div class="white-keys" id="C" onclick="playNote(60)"></div>
-    <div class="white-keys" id="D" onclick="playNote(62)"></div>
-    <div class="white-keys" id="E" onclick="playNote(64)"></div>
-    <div class="white-keys" id="F" onclick="playNote(65)"></div>
-    <div class="white-keys" id="G" onclick="playNote(67)"></div>
-    <div class="white-keys" id="A" onclick="playNote(69)"></div>
-    <div class="white-keys" id="B" onclick="playNote(71)"></div>
+      <div class="white-keys" id="C" onclick="playNote(60)"></div>
+      <div class="white-keys" id="D" onclick="playNote(62)"></div>
+      <div class="white-keys" id="E" onclick="playNote(64)"></div>
+      <div class="white-keys" id="F" onclick="playNote(65)"></div>
+      <div class="white-keys" id="G" onclick="playNote(67)"></div>
+      <div class="white-keys" id="A" onclick="playNote(69)"></div>
+      <div class="white-keys" id="B" onclick="playNote(71)"></div>
     </div>
 
   </div>
@@ -105,19 +104,19 @@
 
 <div class="col3-container">
   <div class="subcol1">
-  <label>
-    <input type="checkbox" id="noiseCheckbox" checked onchange="toggleNoise()">
-    <p align="center"><b>Band-Pass <a href="filter.html" target="_blank">Filtered</a> Noise Off</b></p>
-  </label>
+    <label>
+      <input type="checkbox" id="noiseCheckbox" checked onchange="toggleNoise()">
+      <p align="center"><b>Band-Pass <a href="filter.html" target="_blank">Filtered</a> Noise Off</b></p>
+    </label>
 
-  
-  <p align="center"><b>Frequency <a href="https://en.wikipedia.org/wiki/Modulation" target="_blank">modulation</a> of noise (Hz)</b></p>
-  <input type="range" id="audioRateSlider" min="0.01" max="60" step="0.01" value="0.5">
-  <span id="audioRateValue">0.5</span>
     
-  <p align="center"><b>Intensity of modulation</b></p>
-  <input type="range" id="audioAmountSlider" min="0" max="1000" step="1" value="20">
-  <span id="audioAmountValue">20</span>
+    <p align="center"><b>Frequency <a href="https://en.wikipedia.org/wiki/Modulation" target="_blank">modulation</a> of noise (Hz)</b></p>
+    <input type="range" id="audioRateSlider" min="0.01" max="60" step="0.01" value="0.5">
+    <span id="audioRateValue">0.5</span>
+      
+    <p align="center"><b>Intensity of modulation</b></p>
+    <input type="range" id="audioAmountSlider" min="0" max="1000" step="1" value="20">
+    <span id="audioAmountValue">20</span>
   </div> 
 
   <div class="subcol2">

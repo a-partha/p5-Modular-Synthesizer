@@ -22,6 +22,7 @@ function setup() {
   noise.connect(filt);
   filt.freq(freq);
   noise.start();
+  userStartAudio();  // Required by browsers to unlock sound on interaction
 
   // Telling the noise to have the amplitude of the envelope
   noise.amp(env);

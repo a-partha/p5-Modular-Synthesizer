@@ -1,53 +1,46 @@
 html {
-    height: 100%;
-    width: 100%;
-    
-  }
-  
-  body {
-    height: 100%;
-    width: 100%;
-    font-family:"Dela Gothic One";
-    display: flex;
-    justify-content: center;
-    /* border: 5px solid rgb(0, 0, 0); */
-    background-color: #c59845;
-    
-  }
-  
-  .center-box{
-    width: 1200px;
-    height: 1000px;
-    display :flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    /* border: 5px solid rgb(255, 0, 0); */
-    text-align: center;
-  }
-  
-  
-  p{
-  color:#7a591b;
-   font-size: 25px;
-   font-weight: 400;
-   word-wrap: break-word
-  }
+  height: 100%;
+  width: 100%;
+}
 
-  #graph-pic{
-    width: 800px; 
-    height: 400px;
-    mix-blend-mode:hard-light;
-    }
-  
-  .button-box{
-    display: flex;
-    flex-direction: row;
-    width: 800px;
-    height: 100px;
-    justify-content: space-between;
-  }
 
-h1,h2{
-    color:#926000
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Dela Gothic One";
+  display: flex;
+  justify-content: center;
+  /* border: 5px solid rgb(0, 0, 0); */
+  background-color: #c59845;
+}
+
+.center-box {
+  width: 90%;
+  max-width: 1200px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  /* border: 5px solid rgb(255, 0, 0); */
+  text-align: center;
+}
+
+p {
+  color: #7a591b;
+  font-size: 25px;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+#graph-pic {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  mix-blend-mode: hard-light;
+}
+
+
+h1,h2 {
+  color: #926000;
 }
