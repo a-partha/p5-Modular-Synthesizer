@@ -5,19 +5,19 @@ let circles = [];
 let noteIndex = 0;                      
 let noteStartTime;                      
 let isPlaying = false;                  
-let type = ''; // Tracking button text state
-let firstClick = false;                  
+let type = ''; 
+let firstClick = false;
+
 function setup() {
-  // Creating canvas for visualization
   const canvas2 = createCanvas(1000, 250);
   canvas2.parent('seq1-sketch');
 
-  // Creating envelope and oscillator without starting oscillator
+  // Initializing envelope and oscillator without starting oscillator
   envelope = new p5.Envelope();
   osc = new p5.Oscillator();
   osc.setType('sine');
 
-  // Configuring envelope ADSR and range
+  // Configuring envelope
   envelope.setADSR(0.1, 0.5, 0.1, 0.5);
   envelope.setRange(0.5, 0);
 
@@ -25,10 +25,9 @@ function setup() {
   osc.start();
   osc.amp(0);
 
-  // Initializing note start time
   noteStartTime = millis();
 
-  // Adding click listener to toggle playback
+  // Adding click listener
   const button = document.getElementById('button1');
   button.addEventListener('click', toggle);
 }
@@ -52,7 +51,7 @@ function toggle() {
     firstClick = true;  
   }
 
-  // Toggling play/pause state
+  // Toggling play/pause
   isPlaying = !isPlaying;
 
   if (isPlaying) {
@@ -68,18 +67,18 @@ function displayButtonText() {
   noStroke();
   textSize(17);
   fill('white');
-  text(type, 20, 40);  // Displaying current button text state
+  text(type, 20, 40); 
 }
 
 function playMIDINotes() {
-  let framesPerNote = 60;  // Number of frames per note
-  let noteDuration = 0.3;  // Duration of each note (seconds)
+  let framesPerNote = 60; 
+  let noteDuration = 0.3; 
 
   // Checking whether to play the next note
   if (frameCount % framesPerNote === 0 && noteIndex < midiNotes.length) {
-    let frequency = midiToFreq(midiNotes[noteIndex]);  // Converting MIDI to frequency
-    osc.freq(frequency); // Setting oscillator frequency
-    envelope.play(osc, 0, 0.1); // Triggering the envelope
+    let frequency = midiToFreq(midiNotes[noteIndex]);  // Converting MIDI notes to frequency
+    osc.freq(frequency); 
+    envelope.play(osc, 0, 0.1); 
 
     // Creating new circle
     let newCircle = {
@@ -88,10 +87,10 @@ function playMIDINotes() {
       diameter: map(midiNotes[noteIndex], min(midiNotes), max(midiNotes), 30, 70),
     };
 
-    circles.push(newCircle); // Adding new circle to array
+    circles.push(newCircle); 
     noteIndex++;
 
-    // Resetting sequence after last note
+    // Resetting sequence after the last note
     if (noteIndex === midiNotes.length) {
       noteIndex = 0;                        
       setTimeout(resetCircles, noteDuration * 1000);       

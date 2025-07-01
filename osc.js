@@ -1,15 +1,14 @@
-let amplitude;                       // Defining amplitude variable
-let frequency;                       // Defining frequency variable
-let phase = 0;                       // Initializing phase for wave movement
-let osc;                             // Declaring oscillator variable
-let audioStarted = false;            // Tracking if audio has been started
+let amplitude;                     
+let frequency;                      
+let phase = 0;                        
+let osc;                            
+let audioStarted = false;      
 
 function setup() {
-  // Creating canvas for visualization
   const canvas = createCanvas(1000, 250);
   canvas.parent('osc-sketch');
 
-  // Creating oscillator without starting it
+  // Initializing oscillator without starting it
   osc = new p5.Oscillator();
   osc.setType('sine');
 }
@@ -19,39 +18,45 @@ function draw() {
 
   // Mapping mouse position to control frequency and amplitude
   frequency = constrain(map(mouseX, 0, width, 1, 440), 1, 440);
-  amplitude = constrain(map(mouseY, 0, height, 0, 100), 0, 100);
   osc.freq(frequency);
+
+  // Checking if cursor is outside canvas
+  if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height) {
+    // Muting oscillator when outside
+    amplitude = 0;
+  } else {
+    // Mapping mouse position when inside
+    amplitude = constrain(map(mouseY, 0, height, 0, 100), 0, 100);
+  }
   osc.amp(amplitude);
 
-  // Displaying current frequency and amplitude
+  // Displaying current values
   fill('white');
   textSize(17);
   text('Frequency: ' + frequency, 50, 40);
   text('Amplitude: ' + amplitude, 50, 60);
 
-  // Drawing waveform based on sine function
   drawWave();
 }
 
 function drawWave() {
-  stroke('white');                   // Setting stroke color for wave
-  strokeWeight(1.5);                 // Setting stroke weight for wave
-  noFill();                          // Disabling fill for wave shape
+  stroke('white');                   
+  strokeWeight(1.5);                 
+  noFill();                          
 
   beginShape();
   for (let x = 0; x < width; x += 5) {
-    // Calculating y position based on sine wave formula
+    // Calculating y position based on sine wave's formula
     const y = height / 2 + sin(TWO_PI * (x / width) * frequency + phase) * amplitude;
     vertex(x, y);
   }
   endShape();
 
-  // Incrementing phase for animating wave
   phase += 0.05;
 }
 
 function mousePressed() {
-  // Resuming audio context and starting oscillator on first click
+  // Resuming audio  and starting oscillator on first click
   if (!audioStarted) {
     userStartAudio();
     osc.start();

@@ -22,9 +22,7 @@ function setup() {
   noise.connect(filt);
   filt.freq(freq);
   noise.start();
-  userStartAudio();  // Required by browsers to unlock sound on interaction
-
-  // Telling the noise to have the amplitude of the envelope
+  userStartAudio();  // Browser to unlock sound on interaction
   noise.amp(env);
 }
 
@@ -32,7 +30,7 @@ function setup() {
 function AttackPlay(a) {
   
   let newAttackTime = a;
-  // update the attack time
+  // Updating attack time
   attackTime = newAttackTime;
   env.setADSR(attackTime, decayTime, sustainLevel, releaseTime);
   env.play();

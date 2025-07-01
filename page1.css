@@ -16,7 +16,6 @@ body {
 .center-box {
   width: 90%;
   max-width: 1200px;
-  /* height: 715px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +31,6 @@ p {
   font-weight: 400;
   word-wrap: break-word;
 }
-
 
 h1,h2 {
   color: #926000;

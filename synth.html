@@ -4,35 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Synth With Me</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
-  <script language="javascript" type="text/javascript" src="../../lib/p5.min.js"></script>
-  <script language="javascript" type="text/javascript" src="../../lib/p5.dom.js"></script> 
-  <script src="p5.js"></script>
-  <script src="p5.sound.min.js"></script>
   <script src="synth.js"></script>
-  <link rel="stylesheet" type="text/css" href="synth.css">
+  <link rel="stylesheet" href="synth.css">
 </head>
 
+
+
 <body>
-<div class="main-container">
+  <div class="main-container">
 
- <div class="col1-container">
-  
-  <p align="center"><b>Beat Length (milliseconds)</b></p>
-  <input type="range" id="beatLengthSlider" min="0" max="500" step="5" value="0">
-  <span id="beatLengthValue">0</span>
-  
-  <p><b>Beat Speed</b></p>
-  <input type="range" id="beatRateSlider" min="0" max="3000" step="10" value="0">
-  <span id="beatRateValue">0</span>
-    
-  <p><b>Beat Frequency (Hz)</b></p>
-  <input type="range" id="beatFrequencySlider" min="0" max="2000" step="50" value="0">
-  <span id="beatFrequencyValue">0</span>
-
-</div>
+    <div class="col1-container">
+      <p align="center"><b>Beat Length (milliseconds)</b></p>
+      <input type="range" id="beatLengthSlider" min="0" max="500" step="5" value="0">
+      <span id="beatLengthValue">0</span>
+      
+      <p><b>Beat Speed</b></p>
+      <input type="range" id="beatRateSlider" min="0" max="3000" step="10" value="0">
+      <span id="beatRateValue">0</span>
+        
+      <p><b>Beat Frequency (Hz)</b></p>
+      <input type="range" id="beatFrequencySlider" min="0" max="2000" step="50" value="0">
+      <span id="beatFrequencyValue">0</span>
+    </div>
 
 <div class="col2-container">
   <h1 align="center">A simple <a href="https://en.wikipedia.org/wiki/Modular_synthesizer" target="_blank">Modular Synthesizer</a></h1>
